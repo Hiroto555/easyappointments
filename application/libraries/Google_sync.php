@@ -61,9 +61,7 @@ class Google_sync
      */
     public function initialize_clients(): void
     {
-        $http = new GuzzleHttp\Client([
-            'verify' => false,
-        ]);
+        $http = new GuzzleHttp\Client();
 
         $this->client = new Google_Client();
         $this->client->setHttpClient($http);
